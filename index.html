@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IdoyNews | Portal Berita Terkini</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#"><i class="bi bi-globe me-2"></i>IdoyNews</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active category" data-category="" href="#">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link category" data-category="technology" href="#">Teknologi</a></li>
+          <li class="nav-item"><a class="nav-link category" data-category="business" href="#">Bisnis</a></li>
+          <li class="nav-item"><a class="nav-link category" data-category="sports" href="#">Olahraga</a></li>
+          <li class="nav-item"><a class="nav-link category" data-category="entertainment" href="#">Hiburan</a></li>
+          <li class="nav-item ms-lg-3">
+            <button id="theme-toggle" class="btn btn-outline-light btn-sm">
+              <i class="bi bi-moon-fill"></i> Mode Gelap
+            </button>
+          </li>
+        </ul>
+        <form id="search-form" class="d-flex ms-lg-3 mt-2 mt-lg-0">
+          <input id="search-input" class="form-control form-control-sm me-2" type="search" placeholder="Cari berita..." aria-label="Search">
+          <button class="btn btn-sm btn-primary" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-light text-center py-5 mb-4 shadow-sm" id="header">
+    <div class="container">
+      <h1 class="fw-bold">Selamat Datang di IdoyNews</h1>
+      <p class="text-muted">Sumber Informasi Akurat dan Terpercaya dari Seluruh Dunia</p>
+    </div>
+  </header>
+
+  <!-- Filter Buttons -->
+  <section class="text-center mb-4">
+    <div class="container">
+      <button class="btn btn-outline-primary mx-1 category" data-category="">Umum</button>
+      <button class="btn btn-outline-primary mx-1 category" data-category="technology">Teknologi</button>
+      <button class="btn btn-outline-primary mx-1 category" data-category="business">Bisnis</button>
+      <button class="btn btn-outline-primary mx-1 category" data-category="sports">Olahraga</button>
+      <button class="btn btn-outline-primary mx-1 category" data-category="entertainment">Hiburan</button>
+    </div>
+  </section>
+
+  <!-- News Section -->
+  <main class="container my-4 position-relative">
+    <div id="news-container" class="row g-4 fade-in">
+      <!-- Berita dimuat otomatis -->
+    </div>
+
+    <!-- Loader Spinner -->
+    <div id="loader" class="text-center position-absolute top-50 start-50 translate-middle d-none">
+      <div class="spinner-border text-primary" role="status" style="width: 4rem; height: 4rem;">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light pt-5 pb-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold text-uppercase">IdoyNews</h5>
+          <hr class="border-primary opacity-75 w-25 mb-3">
+          <p>
+            IdoyNews adalah portal berita digital modern yang menyajikan informasi
+            aktual, cepat, dan terpercaya dari berbagai sumber di seluruh dunia.
+            Kami berkomitmen untuk menjadi referensi berita terbaik bagi pembaca Indonesia.
+          </p>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold text-uppercase">Tautan Cepat</h5>
+          <hr class="border-primary opacity-75 w-25 mb-3">
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none text-light category" data-category="">Beranda</a></li>
+            <li><a href="#" class="text-decoration-none text-light category" data-category="technology">Teknologi</a></li>
+            <li><a href="#" class="text-decoration-none text-light category" data-category="business">Bisnis</a></li>
+            <li><a href="#" class="text-decoration-none text-light category" data-category="sports">Olahraga</a></li>
+            <li><a href="#" class="text-decoration-none text-light category" data-category="entertainment">Hiburan</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <h5 class="fw-bold text-uppercase">Hubungi Kami</h5>
+          <hr class="border-primary opacity-75 w-25 mb-3">
+          <p><i class="bi bi-geo-alt-fill me-2"></i> Kota Bogor, Indonesia</p>
+          <p><i class="bi bi-envelope-fill me-2"></i> redaksi@idoynews.com</p>
+          <p><i class="bi bi-telephone-fill me-2"></i> +62 813 8772 6686</p>
+        </div>
+      </div>
+
+      <hr class="border-secondary">
+      <div class="text-center">
+        <p class="mb-0">
+          © 2025 <strong>IdoyNews</strong> — Media Informasi Digital Indonesia.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
